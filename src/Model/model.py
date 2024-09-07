@@ -12,8 +12,6 @@ DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg2://sql_conn_user:Pa
 basepath = os.path.dirname(__file__)
 default_path = os.path.abspath(os.path.join(basepath, '../Extract/loaded'))
 
-DATABASE_URL = "postgresql+psycopg2://sql_conn_user:Password@localhost:5432/sql_conn"
-
 
 Base = declarative_base()
 
