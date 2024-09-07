@@ -1,0 +1,3 @@
+.env
+src/Extract/raw/*
+src/Extract/loaded/*
