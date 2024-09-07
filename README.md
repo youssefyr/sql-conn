@@ -51,7 +51,12 @@ To get started with the project, you can either use Docker or set it up manually
     pip install -r requirements.txt
     ```
 
-3. **Run the scripts**:
+3. **Install Jupyter Notebook** (if not already installed):
+    ```sh
+    pip install jupyter
+    ```
+
+4. **Run the scripts**:
     ```sh
     python src/run-all.py
     ```
