@@ -10,6 +10,31 @@ RESET = '\033[0m'
 
 
 def run_script(script_name, script_path, color, optionalCmd=''):
+    """
+    run_script(script_name, script_path, color, optionalCmd='')
+    Runs a script and checks if it was successful.
+    
+    Parameters:
+    - script_name (str): The name of the script.
+    - script_path (str): The path to the script.
+    - color (str): The color to use for printing the animation.
+    - optionalCmd (str, optional): An optional command to run instead of the script. Defaults to ''.
+    
+    Steps:
+    1. Print the script name in the specified color.
+    2. Determine the command to run:
+       - If `optionalCmd` is provided, use it as the command.
+       - Otherwise, use the script path as the command.
+    3. Execute the command using `os.system`.
+    4. Check the exit status of the command:
+       - If the command was successful (exit status 0), print a success message in green.
+       - If the command failed (non-zero exit status), print an error message in red.
+    5. Reset the terminal color to default.
+    Raises:
+    subprocess.CalledProcessError: If the script or command fails to run.
+    Example usage:
+    run_script('my_script', '/path/to/my_script.py', 'blue', optionalCmd='echo "Hello, World!"')
+    """
     chars = ['|', '/', '-', '\\']
     
     def animate():

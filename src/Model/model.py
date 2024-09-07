@@ -1,4 +1,23 @@
 import os
+"""
+This script connects to a PostgreSQL database and performs the following steps:
+
+1. Import necessary libraries and modules.
+2. Load environment variables from a .env file.
+3. Define the database URL using the loaded environment variable or a default value.
+4. Define the base path and default path for reading CSV files.
+5. Create a SQLAlchemy declarative base.
+6. Create a database engine and session.
+7. Create database tables based on the defined models.
+8. Read CSV files into pandas DataFrames.
+9. Drop existing tables in the database.
+10. Create new tables in the database based on the DataFrames.
+11. Create an empty fact_table DataFrame.
+12. Insert the fact_table DataFrame into the database.
+13. Commit the changes to the database.
+
+Note: Make sure to set the appropriate environment variables and provide the correct file paths for the CSV files.
+"""
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker, declarative_base
@@ -12,7 +31,6 @@ DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg2://sql_conn_user:Pa
 basepath = os.path.dirname(__file__)
 default_path = os.path.abspath(os.path.join(basepath, '../Extract/loaded'))
 
-DATABASE_URL = "postgresql+psycopg2://sql_conn_user:Password@localhost:5432/sql_conn"
 
 
 Base = declarative_base()
