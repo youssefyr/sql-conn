@@ -2,7 +2,13 @@
 
 Dataspliter, postgress model, analysis on the model all in python
 
-
+## Team Members
+Youssef Reda Muhammad Mahmoud <br>
+Basel Nabil Mekky <br>
+Abdelrahman Hazem <br>
+Martin Amgad Saeed <br>
+Ali Hesham Mohamed Mokhtar <br>
+Ziad Ahmed Fathey <br>
 
 ## Getting Started
 
